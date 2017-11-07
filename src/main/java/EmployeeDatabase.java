@@ -56,6 +56,7 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        return 2;
     }
 
     /**
@@ -70,6 +71,7 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        return 2;
     }
 
     /**
