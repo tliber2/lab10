@@ -53,10 +53,13 @@ public class EmployeeDatabase {
      * @return int
      */
     public int countManagersAbove(final Employee employee) {
-        /*
-         * Implement this function
-         */
-        return 2;
+        if (findManager(employee) == null) {
+            return 0;
+        }
+        if (findManager(employee) != null) {
+            countManagersAbove(findManager(employee));
+        }
+        return 1 + countManagersAbove(findManager(employee));
     }
 
     /**
@@ -68,10 +71,13 @@ public class EmployeeDatabase {
      * @return int
      */
     public int countEmployeesUnder(final Employee employee) {
-        /*
-         * Implement this function
-         */
-        return 2;
+        if (findManager(employee) == null) {
+            return 0;
+        }
+        if (findManager(employee) != null) {
+            countManagersAbove(findManager(employee));
+        }
+        return 1 - countManagersAbove(findManager(employee));
     }
 
     /**
